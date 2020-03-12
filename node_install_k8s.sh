@@ -272,6 +272,7 @@ install_flannel(){
 }
 
 join_cluster(){
+ echo  "--------------------------------------------$tocken  MASTERIP:  $masterip"
  kubeadm join --token $tocken --discovery-token-ca-cert-hash sha256:$sha_value $masterip:6443
 }
 
